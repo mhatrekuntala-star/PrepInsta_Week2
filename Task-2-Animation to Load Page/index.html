@@ -1,0 +1,170 @@
+<!-- 1. Bouncing Balls Loader  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .bouncing-balls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bouncing-balls div {
+    width: 20px;
+    height: 20px;
+    background-color: #3498db;
+    border-radius: 50%;
+    margin: 3px;
+    animation: bounce 0.6s infinite alternate;
+  }
+  .bouncing-balls div:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .bouncing-balls div:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  @keyframes bounce {
+    to {
+      transform: translateY(-100%);
+    }
+  }
+  .loading-bar {
+    width: 100px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+  .loading-bar::before {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 100%;
+    background: #3498db;
+    animation: loading 1.5s infinite;
+  }
+  @keyframes loading {
+    0% {
+      left: -50%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  .pulsing-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pulsing-dots div {
+    width: 20px;
+    height: 20px;
+    background-color: #3498db;
+    border-radius: 50%;
+    margin: 3px;
+    animation: pulse 0.6s infinite alternate;
+  }
+  .pulsing-dots div:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .pulsing-dots div:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  @keyframes pulse {
+    to {
+      transform: scale(1.5);
+      opacity: 0.5;
+    }
+  }
+  .rotating-squares {
+    width: 50px;
+    height: 50px;
+    position: relative;
+  }
+  .rotating-squares div {
+    width: 20px;
+    height: 20px;
+    background-color: #3498db;
+    position: absolute;
+    animation: rotate 1s infinite linear;
+  }
+  .rotating-squares div:nth-child(1) {
+    top: 0;
+    left: 0;
+    animation-delay: 0s;
+  }
+  .rotating-squares div:nth-child(2) {
+    top: 0;
+    right: 0;
+    animation-delay: 0.25s;
+  }
+  .rotating-squares div:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    animation-delay: 0.5s;
+  }
+  .rotating-squares div:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    animation-delay: 0.75s;
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .spinning-circle {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ccc;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+</head>
+<body>
+<div class="bouncing-balls">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+<br><br>
+<hr>
+<div class="loading-bar"></div>
+<br><br>
+<hr>
+<div class="pulsing-dots">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<br><br>
+<hr>
+<div class="rotating-squares">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<br><br>
+<hr>
+<div class="spinning-circle"></div>
+</body>
+</html>
+
+
